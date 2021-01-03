@@ -37,6 +37,14 @@ CREATE TABLE IF NOT EXISTS artist_song (
     )
   In cassandra, the data can be access efficiently with appropriate primary key. Our primary key is made of:
   - `sessionid` : which is the partition key
-  - `item_in_sessionid,userid,song' : which are the clustering columns
+  - `item_in_sessionid,userid,song` : which are the clustering columns
+  
+  ## Queries to answer the questions:
+  1- `SELECT * FROM artist_song WHERE sessionid = 338 and item_in_sessionid = 4`
+  
+  2- `SELECT * FROM artist_song WHERE sessionid = 182 and userid = 10 ORDER BY item_in_sessionid ALLOW FILTERING `
+  
+  3- `SELECT * FROM artist_song WHERE song='All Hands Against His Own' ALLOW FILTERING ;`
+  
     
 
