@@ -28,31 +28,32 @@ Three tables have been created for three queries provided above:
 
 1. **Table Name: music_library_artists_on_session**
 
-     column 1: artist  
+     column 1: sessionid  
      column 2: item_in_session  
-     column 3: length  
-     Column 4: sessionid  
-     Column 5: song  
-     PRIMARY KEY(sessionid, item_in_session, )  
+     column 3: artist  
+     column 4: song  
+     column 5: length  
+     PRIMARY KEY(sessionid, item_in_session)
      
-   **The columns output by the query are:**  
+     **The columns output by the query are:**  
    
      column 1: artist  
      column 2: song  
      column 3: length
      
+
 2. **Table Name: music_library_song_by_user_on_session**  
 
-     column 1: artist  
-     column 2: song  
-     column 3: first_name  
-     column 4: last_name  
-     column 5: userid  
-     column 6: sessionid  
-     column 7: item_in_session  
-     PRIMARY KEY(userid, sessionid, item_in_session)  
-     
-   **The columns output by the query are:**  
+     column 1:  userid  
+     column 2:  sessionid  
+     column 3:  item_in_session  
+     column 4:  artist  
+     column 5:  song  
+     column 6:  first_name  
+     column 7:  last_name  
+     PRIMARY KEY(userid, sessionid, item_in_session)
+   
+     **The columns output by the query are:**  
      
      column 1: artist  
      column 2: song  
@@ -62,12 +63,13 @@ Three tables have been created for three queries provided above:
 
 3. **Tablea Name: music_library_users_by_song**  
 
-     column 1: first_name  
-     column 2: last_name  
-     column 3: song  
-     column 4: userid PRIMARY KEY (song, userid)  
+     column 1: song  
+     column 2: userid  
+     column 3: first_name  
+     column 4: last_name  
+     PRIMARY KEY (song, userid) 
      
-   **The columns output by the query are:**  
+     **The columns output by the query are:**  
    
      column 1: first_name  
      column 2: last_name
